@@ -1,0 +1,23 @@
+﻿@model List<Contacto>
+
+<h1>Contactos</h1>
+
+<a class="nav-link text-dark" asp-area="" asp-controller="Contactos" asp-action="Create">Crear Contactos</a>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Nombre</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var contacto in Model)
+		{
+			<tr> 
+				<td>@Html.DisplayFor(m=>contacto.Nombre)</td>
+				<td>@Html.DisplayFor(m => contacto.Telefono)</td>
+				<td>@Html.DisplayFor(m => contacto.Correo)</td>
+			</tr>
+		}
+	</tbody>
+</table>
